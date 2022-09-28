@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <!-- <link rel="shortcut icon"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>messageMark</title>
+</head>
+<body>
+    <main>
+        <section id="login">
+            <h1 id="titulo-inicio">messageMark</h1>
+
+            <h1 id="titulo">Fazer login</h1>
+
+            <form id="form-login">
+                <div class="input-login">
+                    <label for="input-emaillogin" class="label-login">Email</label>
+                    <input type="email" id="input-emaillogin" placeholder="Digite o seu email...">
+                    <!-- <p class="p-erro">Mensagem de erro</p> -->
+                </div>
+    
+                <div class="input-login" id="input-login"> 
+                    <label for="input-senhalogin" class="label-login">Senha</label>
+                    <input type="password" id="input-senhalogin" placeholder="Digite a sua senha...">
+                    <i class="fa-solid fa-eye mostrarsenha-login" id="mostrarsenha-login"></i>
+                    <!-- <p class="p-erro">Mensagem de erro</p> -->
+                </div>
+    
+               <div id="div-manter">
+                   <input type="checkbox" id="input-manter">
+                   <label for="input-manter">Mantenha-me conectado</label>
+               </div>
+    
+               <div>
+                    <button id="button">
+                        <p>Entrar</p>
+                    </button>
+                </div>
+            </form>
+
+            <div id="footer">
+                <p style="font-weight: 500;">Não possui uma conta? <a id="botao-abrir">Criar conta</a></p>
+            </div>
+
+        </section>
+
+        <div id="wallpaper">    
+            <h1>messageMark</h1>
+        </div>
+<!-- Modal - criar conta -->
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+        <div id="header">
+            <i class="fa-solid fa-x" id="botao-fechar"></i>
+            <h1 id="titulo-criarconta">messageMark</h1>
+            <h2>Criar conta</h2>
+        </div>
+    
+        <form id="form">
+            <div class="controle-form"> 
+                <label for="input-usuario" class="label-criarconta">Usuário</label>
+                <input type="text" class="input-criarconta" id="input-usuario" placeholder="Digite o seu nome de usuario...">
+                <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
+                <i class="fa-solid fa-circle-check icone"></i>
+                <p class="mensagem-erro">Mensagem de erro</p>
+            </div>
+    
+            <div class="controle-form">
+                <label for="input-email" class="label-criarconta">Email</label>
+                <input type="email" class="input-criarconta" id="input-email" placeholder="Digite o seu email...">
+                <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
+                <i class="fa-solid fa-circle-check icone"></i>
+                <p class="mensagem-erro">Mensagem de erro</p>
+            </div>
+    
+            <div class="controle-form">
+                <label for="input-senha" class="label-criarconta">Senha</label>
+                <input type="password" class="input-criarconta input-mostrarSenha" id="input-senha" placeholder="Digite a sua senha...">
+                <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
+                <i class="fa-solid fa-circle-check icone"></i>
+                <i class="fa-solid fa-eye icone-senha" id="mostrar-senhaCriar"></i>
+                <p class="mensagem-erro">Mensagem de erro</p>
+            </div>
+    
+            <div class="controle-form">
+                <label for="input-confirmsenha" class="label-criarconta">Confirme sua senha</label>
+                <input type="password" class="input-criarconta input-mostrarSenha" id="input-confirmsenha" placeholder="Digite a sua senha novamente...">
+                <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
+                <i class="fa-solid fa-circle-check icone"></i>
+                <i class="fa-solid fa-eye icone-senha" id="mostrar-senhaConfirm"></i>
+                <p class="mensagem-erro">Mensagem de erro</p>
+            </div>
+    
+            <button type="submit" class="botao-form" id="botao-submit">Criar conta</button>
+    
+            <button type="reset" class="botao-form" id="botao-reset">Limpar</button>
+        </form>
+    </div>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/1fb8dcae34.js" crossorigin="anonymous"></script>
+    <script src="logincriarconta.js"></script>
+    <script src="funcionalidades.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+#login {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+}
+
+#form-login {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-login p {
+    color: #e74c3c;
+    visibility: hidden;
+}
+
+.input-login.erro-login p {
+    visibility: visible;
+}
+
+.input-login {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.input-login label {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-login input {
+    font-weight: 500;
+    padding: 12px;
+    background-color: #dadce3;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#input-login {
+    position: relative;
+}
+
+#mostrarsenha-login {
+    position: absolute;
+    right: 4%;
+    top: 55%;
+    /* top: 44%; */
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+#mostrarsenha-login:hover {
+    color: #00D7FF;
+    transform: scale(1.08);
+}
+
+#titulo-inicio {
+    margin-top: 15%;
+    border: 2px solid black;
+    padding: 1rem 2rem;
+    margin-bottom: 20%;
+}
+
+#titulo {
+    color: black;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.label-login {
+    width: 80%;
+    font-weight: 500;
+    color: black;
+}
+
+
+#div-manter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin-top: 15px;
+}
+
+#div-manter label {
+    margin-left: 10px;
+}
+
+/* Para nos estilizar o nosso campo do checkbox nos primeiros devemos tirar todas as estilizacoes padroes dele */
+
+#div-manter input {
+    font-weight: 600;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #dadce3;
+    border-radius: 4px;
+    border: none;
+}
+
+#div-manter input:checked {
+    background-color: #00D7FF;
+}
+
+#div-manter input:checked::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px; 
+    border: 3px solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+}
+
+#button {
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #dadce3;
+    border: none;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+#button p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#button:hover {
+    transform: scale(1.08);
+    background-color: #00D7FF;
+    border: none;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30%;
+}
+
+#footer a:hover {
+    color: #00D7FF;
+}
+
+#footer a {
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+
+#wallpaper {
+    background: linear-gradient(45deg, #72FFFF, #00D7FF, #0096FF, #5800FF);
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 300% 100%;
+    animation: cores 15s ease infinite;
+}
+
+#wallpaper h1 {
+    font-weight: 700;
+    font-size: 52px;
+    padding: 2rem 4rem;
+    border: 3px solid white;
+    color: white;
+}
+
+@keyframes cores{
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+/* Modal - Criar conta */
+
+
+
+
+
+
+
+#titulo-criarconta {
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 10px 2rem;
+    margin-bottom: 15px;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    background-color: #dadce3;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #72FFFF, #00D7FF, #0096FF, #5800FF);
+    animation: cores 15s ease infinite;
+    /* background-size: 300% 100%; */
+}
+
+#header i:hover {
+    color: #00D7FF;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+#header i {
+    margin-left: 90%;
+    margin-top: 2%;
+}
+
+ 
+ #header h2 {
+    margin-bottom: 15px;
+ }
+ 
+ #form {
+    padding: 20px;
+}
+
+.label-criarconta {
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-criarconta {
+    display: block;
+    width: 100%;
+    margin-bottom: 38px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #dadce3;
+    background-color: #dadce3;
+    font-weight: 500;
+}
+
+#botao-submit:hover, #botao-reset:hover {
+    transform: scale(1.08);
+    background-color: #00D7FF;
+    color: white;
+}
+
+#botao-submit {
+    padding: 12px;
+    background-color: #dadce3;
+    border-radius: 8px;
+    border: none;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#botao-reset {
+    padding: 12px;
+    background-color: #dadce3;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    border: none;
+    transition: 0.6s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#fade,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal.hide {
+    top: 0;
+  }
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+} 
+
+.controle-form {
+    position: relative;
+}
+
+.mensagem-erro {
+    position: absolute;
+    left: 0;
+    top: 99%;
+    visibility: hidden;
+    font-size: 15px;
+}
+
+
+.icone{
+    position: absolute;
+    right: 3%;
+    top: 61%;
+    visibility: hidden;
+}
+
+.icone-senha {
+    position: absolute;
+    right: 3%;
+    top: 61%;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.icone-senha:hover {
+    color: #00D7FF;
+    transform: scale(1.08);
+}
+
+.controle-form.erro input {
+    border-color: #e74c3c;
+}
+
+.controle-form.sucesso input {
+    border-color: #2ecc71;
+}
+
+.controle-form.erro i.fa-circle-exclamation {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.controle-form.sucesso i.fa-circle-check {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.controle-form.erro p {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.controle-form.erro i.fa-eye {
+    margin-right: 30px;
+}
+
+.controle-form.sucesso i.fa-eye {
+    margin-right: 30px;
+}
