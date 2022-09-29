@@ -34,7 +34,7 @@ function validacaoLogin () {
 
   if(!conta){
     // alert("Verifique o usuario ou a senha.");
-    erroLogin ("Verifique o email e a senha!")
+    alert ("Verifique o email e a senha!")
     return;
   }
 
