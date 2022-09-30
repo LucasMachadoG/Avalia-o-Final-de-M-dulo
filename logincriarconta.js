@@ -158,16 +158,6 @@ function toggleModal () {
 });
 
 
-// function checkLogado () {
-//   if (logado) {
-//       return logado
-//   } else if (sessao){
-//       return sessao
-//   } else {
-//       window.location.href = "index.html"
-//   }
-// }
-
 function checkLogado(){
   if(sessao){
       sessionStorage.setItem("logado", sessao);
