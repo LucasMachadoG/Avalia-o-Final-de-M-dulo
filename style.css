@@ -26,12 +26,12 @@ main {
     align-items: center;
 }
 
-.input-login p {
+.p-mensagem {
     color: #e74c3c;
     visibility: hidden;
 }
 
-.input-login.erro-login p {
+.p-mensagem.erro-login {
     visibility: visible;
 }
 

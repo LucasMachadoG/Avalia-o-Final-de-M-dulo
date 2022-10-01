@@ -33,14 +33,13 @@ function validacaoLogin () {
   const conta = pegarConta (email)
 
   if(!conta){
-    // alert("Verifique o usuario ou a senha.");
-    alert ("Verifique o email e a senha!")
+    erroLogin ("Check your email and password!")
     return;
   }
 
   if(conta){
       if(conta.senha !== senha){
-        alert("Verifique o usuario ou a senha.");
+        erroLogin ("Check your email and password!")
         return;
     }
     salvarSessao(email, check);
@@ -144,6 +143,13 @@ function erro (input, mensagem) {
   
   paragrafo.innerText = mensagem
   formControl.className = "controle-form erro"
+}
+
+function erroLogin (mensagem) {
+  const p = document.getElementById ("p-erro")
+
+  p.innerText = mensagem
+  p.className = "p-mensagem erro-login"
 }
 
 

@@ -18,36 +18,35 @@
         <section id="login">
             <h1 id="titulo-inicio">messageMark</h1>
 
-            <h1 id="titulo">Fazer login</h1>
+            <h1 id="titulo">Sing in</h1>
+            <p class="p-mensagem" id="p-erro">Check your email and password!</p>
 
             <form id="form-login">
                 <div class="input-login">
                     <label for="input-emaillogin" class="label-login">Email</label>
-                    <input type="email" id="input-emaillogin" placeholder="Digite o seu email...">
-                    <!-- <p class="p-erro">Mensagem de erro</p> -->
+                    <input type="email" id="input-emaillogin" placeholder="Enter your email...">
                 </div>
     
                 <div class="input-login" id="input-login"> 
-                    <label for="input-senhalogin" class="label-login">Senha</label>
-                    <input type="password" id="input-senhalogin" placeholder="Digite a sua senha...">
+                    <label for="input-senhalogin" class="label-login">Password</label>
+                    <input type="password" id="input-senhalogin" placeholder="Enter your password...">
                     <i class="fa-solid fa-eye mostrarsenha-login" id="mostrarsenha-login"></i>
-                    <!-- <p class="p-erro">Mensagem de erro</p> -->
                 </div>
     
                <div id="div-manter">
                    <input type="checkbox" id="input-manter">
-                   <label for="input-manter">Mantenha-me conectado</label>
+                   <label for="input-manter">Keep me logged in</label>
                </div>
     
                <div>
                     <button id="button">
-                        <p>Entrar</p>
+                        <p>Sing in</p>
                     </button>
                 </div>
             </form>
 
             <div id="footer">
-                <p style="font-weight: 500;">Não possui uma conta? <a id="botao-abrir">Criar conta</a></p>
+                <p style="font-weight: 500;">Don't have an account? <a id="botao-abrir">Sing up</a></p>
             </div>
 
         </section>
@@ -61,13 +60,13 @@
         <div id="header">
             <i class="fa-solid fa-x" id="botao-fechar"></i>
             <h1 id="titulo-criarconta">messageMark</h1>
-            <h2>Criar conta</h2>
+            <h2>Sing up</h2>
         </div>
     
         <form id="form">
             <div class="controle-form"> 
-                <label for="input-usuario" class="label-criarconta">Usuário</label>
-                <input type="text" class="input-criarconta" id="input-usuario" placeholder="Digite o seu nome de usuario...">
+                <label for="input-usuario" class="label-criarconta">Username</label>
+                <input type="text" class="input-criarconta" id="input-usuario" placeholder="Enter your username...">
                 <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
                 <i class="fa-solid fa-circle-check icone"></i>
                 <p class="mensagem-erro">Mensagem de erro</p>
@@ -75,15 +74,15 @@
     
             <div class="controle-form">
                 <label for="input-email" class="label-criarconta">Email</label>
-                <input type="email" class="input-criarconta" id="input-email" placeholder="Digite o seu email...">
+                <input type="email" class="input-criarconta" id="input-email" placeholder="Enter your email...">
                 <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
                 <i class="fa-solid fa-circle-check icone"></i>
                 <p class="mensagem-erro">Mensagem de erro</p>
             </div>
     
             <div class="controle-form">
-                <label for="input-senha" class="label-criarconta">Senha</label>
-                <input type="password" class="input-criarconta input-mostrarSenha" id="input-senha" placeholder="Digite a sua senha...">
+                <label for="input-senha" class="label-criarconta">Password</label>
+                <input type="password" class="input-criarconta input-mostrarSenha" id="input-senha" placeholder="Enter your password...">
                 <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
                 <i class="fa-solid fa-circle-check icone"></i>
                 <i class="fa-solid fa-eye icone-senha" id="mostrar-senhaCriar"></i>
@@ -91,17 +90,17 @@
             </div>
     
             <div class="controle-form">
-                <label for="input-confirmsenha" class="label-criarconta">Confirme sua senha</label>
-                <input type="password" class="input-criarconta input-mostrarSenha" id="input-confirmsenha" placeholder="Digite a sua senha novamente...">
+                <label for="input-confirmsenha" class="label-criarconta">Confirm your password</label>
+                <input type="password" class="input-criarconta input-mostrarSenha" id="input-confirmsenha" placeholder="Enter your password again...">
                 <i class="fa-sharp fa-solid fa-circle-exclamation icone"></i>
                 <i class="fa-solid fa-circle-check icone"></i>
                 <i class="fa-solid fa-eye icone-senha" id="mostrar-senhaConfirm"></i>
                 <p class="mensagem-erro">Mensagem de erro</p>
             </div>
     
-            <button type="submit" class="botao-form" id="botao-submit">Criar conta</button>
+            <button type="submit" class="botao-form" id="botao-submit">Sing up</button>
     
-            <button type="reset" class="botao-form" id="botao-reset">Limpar</button>
+            <button type="reset" class="botao-form" id="botao-reset">Reset</button>
         </form>
     </div>
     </main>
