@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylehome.css" rel="stylesheet">
+    <link href="/css/stylehome.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -33,22 +33,53 @@
         <div id="div-mensagem">
             <p id="mensagem-erro">Mensagem de erro</p>
         </div>
+
+    </div>
+    
+    <div style="display: flex; justify-content: center;">
+        <hr style="background-color: #00D7FF; padding: 2px; width: 98%; text-align: center; border-radius: 8px; margin-top: 1%;">
     </div>
 
-    <div id="div-table">
-        <table id="table">
-            <thead>
-                <th>Id</th>
-                <th>Description</th>
-                <th>Detailing</th>
-                <th>Action</th>
-            </thead>
-            <tbody id="tbody">
-                
-            </tbody>
-        </table>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; width: 100%;">
+        <div id="cards"></div>
     </div>
+
+    <!-- Modal deletar recados -->
+
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <header id="header-delete">
+            <i class="fa-solid fa-x" id="botao-fechartroca"></i>
+            <h3>Do you really want to delete this message?</h3>
+        </header>
+
+        <div id="button-div">
+            <button id="button-yes">Yes</button>
+            <button id="button-no">No</button>
+        </div>
+    </div>
+
+    <!-- Modal visualizar recados -->
+
+    <div id="fade2" class="hide"></div>
+    <div id="modal2" class="hide">
+        <div style="padding: 20px;">
+            <i class="fa-solid fa-x" id="botao-visu"></i>
+            <div id="div-descricao">
+                <h3>Descricao: </h3>
+                <hr style="background-color: white; padding: 1px; margin-bottom: 1%;">
+                <p id="pdesc">Teste</p>
+            </div>
+    
+            <div id="div-detalhamento">
+                <h3>Detalhamento: </h3>
+                <hr style="background-color: white; padding: 1px; margin-bottom: 1%;">
+                <p id="pdeta">Teste</p>
+            </div>
+        </div>
+    </div>
+
     <script src="https://kit.fontawesome.com/1fb8dcae34.js" crossorigin="anonymous"></script>
-    <script src="home.js"></script>
+    <script src="/js/home.js"></script>
 </body>
 </html>

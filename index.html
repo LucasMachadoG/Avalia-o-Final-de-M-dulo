@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <!-- <link rel="shortcut icon"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,22 +20,33 @@
 
             <h1 id="titulo">Sing in</h1>
             <p class="p-mensagem" id="p-erro">Check your email and password!</p>
-
+            
+            
             <form id="form-login">
                 <div class="input-login">
                     <label for="input-emaillogin" class="label-login">Email</label>
                     <input type="email" id="input-emaillogin" placeholder="Enter your email...">
                 </div>
-    
+                
                 <div class="input-login" id="input-login"> 
                     <label for="input-senhalogin" class="label-login">Password</label>
                     <input type="password" id="input-senhalogin" placeholder="Enter your password...">
                     <i class="fa-solid fa-eye mostrarsenha-login" id="mostrarsenha-login"></i>
                 </div>
+                
+                <div id="button-image">
+                    <button type="button" class="button face">
+                        <img src="./image/facebook-icon.png">
+                    </button>
     
-               <div id="div-manter">
-                   <input type="checkbox" id="input-manter">
-                   <label for="input-manter">Keep me logged in</label>
+                    <button type="button" class="button google">
+                        <img src="./image/google-icon.png">
+                    </button>
+                </div>
+                
+                <div id="div-manter">
+                    <input type="checkbox" id="input-manter">
+                    <label for="input-manter">Keep me logged in</label>
                </div>
     
                <div>
@@ -46,13 +57,20 @@
             </form>
 
             <div id="footer">
+                <p style="font-weight: 500;">Forgot password?<a id="botao-trocasenha"> Change Password</a></p>
                 <p style="font-weight: 500;">Don't have an account? <a id="botao-abrir">Sing up</a></p>
             </div>
 
         </section>
 
-        <div id="wallpaper">    
-            <h1>messageMark</h1>
+        <div id="wallpaper">   
+            <div id="div-wallpaper">
+                <p class="paragrafo animation-teste">Welcome to</p>
+                <p id="messagemark" class="animation-teste">messageMark</p>
+                <p class="paragrafo animation-teste">your favorite scrapbook</p>
+
+                <!-- <p class="animation-teste" style="color: white; font-size: 36px; font-weight: 600; white-space: nowrap; overflow: hidden;">Isso eh apenas um teste</p> -->
+            </div> 
         </div>
 <!-- Modal - criar conta -->
         <div id="fade" class="hide"></div>
@@ -103,10 +121,31 @@
             <button type="reset" class="botao-form" id="botao-reset">Reset</button>
         </form>
     </div>
+
+    <!-- Modal esqueceu senha -->
+
+    <div id="fade2" class="hide"></div>
+    <div id="modal2" class="hide">
+        <header id="header2">
+            <i class="fa-solid fa-x" id="botao-fechartroca"></i>
+            <p>Change Password</p>
+        </header>
+
+        <form id="form2">
+            <div class="form-control">
+                <label for="input-trocarsenha" id="label-trocarsenha">Email</label>
+                <input id="input-trocarsenha" type="email" placeholder="Inform your email...">
+                <p id="mensagem-troca" class="mensagem-troca">Esse email nao esta cadastrado!</p>
+            </div>
+
+            <button id="botao-trocarsubmit" type="submit">Submit</button>
+            <button id="botao-trocarreset" type="reset">Reset</button>
+        </form>
+    </div>
     </main>
     
     <script src="https://kit.fontawesome.com/1fb8dcae34.js" crossorigin="anonymous"></script>
-    <script src="logincriarconta.js"></script>
-    <script src="funcionalidades.js"></script>
+    <script src="/js/logincriarconta.js"></script>
+    <script src="/js/funcionalidades.js"></script>
 </body>
 </html>

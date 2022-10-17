@@ -7,6 +7,8 @@
 
 main {
     display: flex;
+    height: 100vh;
+    width: 100%;
 }
 
 #login {
@@ -74,16 +76,15 @@ main {
 }
 
 #titulo-inicio {
-    margin-top: 15%;
     border: 2px solid black;
     padding: 1rem 2rem;
-    margin-bottom: 20%;
+    margin-bottom: 18%;
 }
 
 #titulo {
     color: black;
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 1%;
 }
 
 .label-login {
@@ -92,13 +93,47 @@ main {
     color: black;
 }
 
+#button-image {
+    width: 80%;
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#button-image img {
+    width: 20px;
+}
+
+.button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.6s;
+}
+
+.button:hover {
+    transform: scale(1.08);
+}
+
+.face {
+    background-color: #3b5998;
+}
+
+.google {
+    background-color: #dadce3;
+}
 
 #div-manter {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 80%;
-    margin-top: 15px;
+    margin-top: 3%;
 }
 
 #div-manter label {
@@ -138,7 +173,8 @@ main {
     border-radius: 10px;
     background-color: #dadce3;
     border: none;
-    margin-top: 50px;
+    margin-top: 20%;
+    margin-bottom: 75%;
     cursor: pointer;
     transition: 0.6s;
 }
@@ -158,7 +194,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30%;
 }
 
 #footer a:hover {
@@ -174,38 +209,56 @@ main {
 
 #wallpaper {
     background: linear-gradient(45deg, #72FFFF, #00D7FF, #0096FF, #5800FF);
-    flex: 1;
     width: 100%;
+    flex: 1;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background-size: 300% 100%;
     animation: cores 15s ease infinite;
+    flex-direction: column;
 }
 
-#wallpaper h1 {
+.paragrafo {
     font-weight: 700;
-    font-size: 52px;
-    padding: 2rem 4rem;
-    border: 3px solid white;
+    font-size: 32px;
     color: white;
+    margin-bottom: 1%;
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
 }
+
+#messagemark {
+    font-weight: 700;
+    font-size: 50px;
+    border: 3px solid white;
+    padding: 1rem 2rem;
+    color: white;
+    margin-bottom: 1%;
+}
+
 
 @keyframes cores{
     0% {
         background-position: 0% 50%;
     }
-
+    
     50% {
         background-position: 100% 50%;
     }
-
+    
     100% {
         background-position: 0% 50%;
     }
 }
 
+@media (max-width: 1000px) {
+    #div-wallpaper {
+        display: none;
+    }
+}
 
 
 
@@ -218,7 +271,7 @@ main {
 
 
 #titulo-criarconta {
-    font-size: 25px;
+    font-size: 32px;
     border: 2px solid black;
     padding: 10px 2rem;
     margin-bottom: 15px;
@@ -254,8 +307,6 @@ main {
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, #72FFFF, #00D7FF, #0096FF, #5800FF);
-    animation: cores 15s ease infinite;
-    /* background-size: 300% 100%; */
 }
 
 #header i:hover {
@@ -300,7 +351,6 @@ main {
 #botao-submit:hover, #botao-reset:hover {
     transform: scale(1.08);
     background-color: #00D7FF;
-    color: white;
 }
 
 #botao-submit {
@@ -406,4 +456,155 @@ main {
 
 .controle-form.sucesso i.fa-eye {
     margin-right: 30px;
+}
+
+
+
+
+/* Modal - Esqueceu a senha */
+
+
+
+
+#fade2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal2 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#header2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #dadce3;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #72FFFF, #00D7FF, #0096FF, #5800FF);
+}
+
+#header2 h1 {
+    font-size: 32px;
+    border: 2px solid black;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding: 1rem 2rem;
+}
+
+#header2 p {
+    font-size: 26px;
+    margin-bottom: 3%;
+    font-weight: 600;
+}
+
+#header2 i {
+    margin-left: 90%;
+    margin-top: 2%;
+}
+
+#header2 i:hover {
+    color: #00D7FF;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+#form2 {
+    padding: 20px;
+}
+
+#label-trocarsenha {
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#input-trocarsenha {
+    display: block;
+    width: 100%;
+    margin-bottom: 38px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #dadce3;
+    background-color: #dadce3;
+    font-weight: 500;
+}
+
+.form-control {
+    position: relative;
+}
+
+.form-control p {
+    position: absolute;
+    top: 99%;
+    font-size: 15px;
+}
+
+.mensagem-troca {
+    visibility: hidden;
+}
+
+.mensagem-troca.erro-troca {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+#botao-trocarsubmit:hover, #botao-trocarreset:hover {
+    transform: scale(1.08);
+    background-color: #00D7FF;
+}
+
+#botao-trocarsubmit {
+    padding: 12px;
+    background-color: #dadce3;
+    border-radius: 8px;
+    border: none;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#botao-trocarreset {
+    padding: 12px;
+    background-color: #dadce3;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    border: none;
+    transition: 0.6s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#fade2, #modal2 {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal2.hide {
+    top: 0;
+}
+
+#modal2.hide, #fade2.hide {
+    opacity: 0;
+    pointer-events: none;
 }

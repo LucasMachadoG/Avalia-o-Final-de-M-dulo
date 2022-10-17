@@ -8,10 +8,18 @@ const senha = document.getElementById ("input-senha")
 const confirmSenha = document.getElementById ("input-confirmsenha")
 const form = document.getElementById ("form")
 
-const botaoOpenModal = document.querySelector("#botao-abrir");
-const botaoCloseModal = document.querySelector("#botao-fechar");
-const modal = document.querySelector("#modal");
-const fade = document.querySelector("#fade");
+//Variaveis criar conta modal
+const botaoOpenModal = document.querySelector ("#botao-abrir");
+const botaoCloseModal = document.querySelector ("#botao-fechar");
+const modal = document.querySelector ("#modal");
+const fade = document.querySelector ("#fade");
+
+//Variaveis trocar senha modal
+const botaoOpenModalTroca = document.querySelector ("#botao-trocasenha")
+const botaoCloseModalTroca = document.querySelector ("#botao-fechartroca")
+const modal2 = document.querySelector ("#modal2")
+const fade2 = document.querySelector ("#fade2")
+const form2 = document.querySelector ("#form2")
 
 
 // Realizar login
@@ -50,11 +58,14 @@ function validacaoLogin () {
 
 //Criacao de conta 
 
-form.addEventListener ("submit", (e) => {
-  e.preventDefault()
-  
-  validacaoInput ()
-})
+if (form) {
+  form.addEventListener ("submit", (e) => {
+    e.preventDefault()
+    
+    validacaoInput ()
+  })
+}
+
 
 function validacaoInput (){
   
@@ -110,6 +121,31 @@ function validacaoInput (){
   
 }
 
+
+// Troca de senha!
+if (form2) {
+  form2.addEventListener ("submit", (e) => {
+    e.preventDefault()
+    
+    validacaoTroca ()
+  })
+} 
+
+function validacaoTroca () {
+  
+  const email = document.getElementById ("input-trocarsenha").value
+
+  const conta = pegarConta (email)
+
+  if (!conta) {
+    erroTroca ("Este email nao esta cadastrado!")
+    return
+  }
+
+  toggleModal2()
+}
+
+
 function salvarConta (data) {
   localStorage.setItem (data.email, JSON.stringify (data))
 }
@@ -152,17 +188,12 @@ function erroLogin (mensagem) {
   p.className = "p-mensagem erro-login"
 }
 
+function erroTroca (mensagem) {
+  const p = document.getElementById ("mensagem-troca")
 
-//Fade
-function toggleModal () {
-  modal.classList.toggle("hide")
-  fade.classList.toggle("hide")
+  p.innerText = mensagem
+  p.className = "mensagem-troca erro-troca"
 }
-
-[botaoCloseModal, botaoOpenModal, fade].forEach((el) => {
-  el.addEventListener("click", () => toggleModal());
-});
-
 
 function checkLogado(){
   if(sessao){
@@ -175,6 +206,28 @@ function checkLogado(){
       window.location.href = "home.html";
   }
 }
+
+//Fade
+function toggleModal () {
+  modal.classList.toggle("hide")
+  fade.classList.toggle("hide")
+}
+
+[botaoCloseModal, botaoOpenModal, fade].forEach((e) => {
+  e.addEventListener("click", () => toggleModal());
+});
+
+
+function toggleModal2 () {
+  modal2.classList.toggle ("hide")
+  fade2.classList.toggle ("hide")
+}
+
+[botaoCloseModalTroca, botaoOpenModalTroca, fade2].forEach((e) => {
+  e.addEventListener("click", () =>  toggleModal2 ())
+})
+
+
 
 
 
