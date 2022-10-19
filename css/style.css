@@ -11,6 +11,26 @@ main {
     width: 100%;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+
+/* Media query */
+
+@media (max-width: 1000px) {
+    #div-wallpaper {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
 #login {
     display: flex; 
     align-items: center;
@@ -19,6 +39,19 @@ main {
     width: 100%;
     max-width: 500px;
     height: 100vh;
+}
+
+#titulo-inicio {
+    border: 2px solid black;
+    padding:2rem 3rem;
+    margin-bottom: 10%;
+    font-size: 2.8rem;
+}
+
+#titulo {
+    color: black;
+    font-size: 2.6rem;
+    margin-bottom: 1%;
 }
 
 #form-login {
@@ -65,9 +98,9 @@ main {
     position: absolute;
     right: 4%;
     top: 55%;
-    /* top: 44%; */
     transition: 0.6s;
     cursor: pointer;
+    font-size: 1.4rem;
 }
 
 #mostrarsenha-login:hover {
@@ -75,22 +108,12 @@ main {
     transform: scale(1.08);
 }
 
-#titulo-inicio {
-    border: 2px solid black;
-    padding: 1rem 2rem;
-    margin-bottom: 18%;
-}
-
-#titulo {
-    color: black;
-    font-size: 26px;
-    margin-bottom: 1%;
-}
 
 .label-login {
     width: 80%;
     font-weight: 500;
     color: black;
+    font-size: 1.4rem;
 }
 
 #button-image {
@@ -138,6 +161,7 @@ main {
 
 #div-manter label {
     margin-left: 10px;
+    font-size: 1.4rem;
 }
 
 /* Para nos estilizar o nosso campo do checkbox nos primeiros devemos tirar todas as estilizacoes padroes dele */
@@ -174,13 +198,13 @@ main {
     background-color: #dadce3;
     border: none;
     margin-top: 20%;
-    margin-bottom: 75%;
+    /* margin-bottom: 75%; */
     cursor: pointer;
     transition: 0.6s;
 }
 
 #button p {
-    font-size: 18px;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
@@ -194,16 +218,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10%;
 }
 
 #footer a:hover {
     color: #00D7FF;
 }
 
+#footer p {
+    font-size: 1.4rem;
+}
+
 #footer a {
     font-weight: 600;
     cursor: pointer;
     transition: 0.6s;
+    font-size: 1.4rem;
 }
 
 
@@ -222,7 +252,7 @@ main {
 
 .paragrafo {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 3.2rem;
     color: white;
     margin-bottom: 1%;
     width: 400px;
@@ -232,13 +262,12 @@ main {
 
 #messagemark {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 5rem;
     border: 3px solid white;
     padding: 1rem 2rem;
     color: white;
     margin-bottom: 1%;
 }
-
 
 @keyframes cores{
     0% {
@@ -254,11 +283,6 @@ main {
     }
 }
 
-@media (max-width: 1000px) {
-    #div-wallpaper {
-        display: none;
-    }
-}
 
 
 
@@ -269,9 +293,8 @@ main {
 
 
 
-
 #titulo-criarconta {
-    font-size: 32px;
+    font-size: 3.2rem;
     border: 2px solid black;
     padding: 10px 2rem;
     margin-bottom: 15px;
@@ -298,6 +321,7 @@ main {
     border-radius: 0.5rem;
     z-index: 10;
     overflow: hidden;
+    border: 3px solid #dadce3;
 }
 
 #header {
@@ -306,7 +330,6 @@ main {
     background-color: #dadce3;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #72FFFF, #00D7FF, #0096FF, #5800FF);
 }
 
 #header i:hover {
@@ -319,20 +342,21 @@ main {
 #header i {
     margin-left: 90%;
     margin-top: 2%;
+    font-size: 1.4rem;
+}
+ 
+#header h2{
+    margin-bottom: 2%;
+    font-size: 1.6rem;
 }
 
- 
- #header h2 {
-    margin-bottom: 15px;
- }
- 
  #form {
     padding: 20px;
 }
 
 .label-criarconta {
     display: inline-block;
-    font-size: 15px;
+    font-size:1.4rem;
     margin-bottom: 10px;
     font-weight: 500;
 }
@@ -361,7 +385,7 @@ main {
     margin-right: 15px;
     cursor: pointer;
     transition: 0.6s;
-    font-size: 15px;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
@@ -373,7 +397,7 @@ main {
     cursor: pointer;
     border: none;
     transition: 0.6s;
-    font-size: 15px;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
@@ -403,7 +427,7 @@ main {
     left: 0;
     top: 99%;
     visibility: hidden;
-    font-size: 15px;
+    font-size: 1.4rem;
 }
 
 
@@ -412,6 +436,7 @@ main {
     right: 3%;
     top: 61%;
     visibility: hidden;
+    font-size: 1.4rem;
 }
 
 .icone-senha {
@@ -420,6 +445,7 @@ main {
     top: 61%;
     cursor: pointer;
     transition: 0.6s;
+    font-size: 1.4rem;
 }
 
 .icone-senha:hover {
@@ -487,6 +513,7 @@ main {
     border-radius: 0.5rem;
     z-index: 10;
     overflow: hidden;
+    border: 3px solid #dadce3;
 }
 
 #header2 {
@@ -495,11 +522,11 @@ main {
     background-color: #dadce3;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #72FFFF, #00D7FF, #0096FF, #5800FF);
+    background-color: #dadce3;
 }
 
 #header2 h1 {
-    font-size: 32px;
+    font-size: 3.2rem;
     border: 2px solid black;
     margin-top: 5%;
     margin-bottom: 3%;
@@ -507,7 +534,7 @@ main {
 }
 
 #header2 p {
-    font-size: 26px;
+    font-size: 2.2rem;
     margin-bottom: 3%;
     font-weight: 600;
 }
@@ -515,6 +542,7 @@ main {
 #header2 i {
     margin-left: 90%;
     margin-top: 2%;
+    font-size: 1.4rem;
 }
 
 #header2 i:hover {
@@ -530,7 +558,7 @@ main {
 
 #label-trocarsenha {
     display: inline-block;
-    font-size: 15px;
+    font-size: 1.4rem;
     margin-bottom: 10px;
     font-weight: 500;
 }
@@ -553,7 +581,7 @@ main {
 .form-control p {
     position: absolute;
     top: 99%;
-    font-size: 15px;
+    font-size: 1.4rem;
 }
 
 .mensagem-troca {
@@ -578,7 +606,7 @@ main {
     margin-right: 15px;
     cursor: pointer;
     transition: 0.6s;
-    font-size: 15px;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
@@ -590,7 +618,7 @@ main {
     cursor: pointer;
     border: none;
     transition: 0.6s;
-    font-size: 15px;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 

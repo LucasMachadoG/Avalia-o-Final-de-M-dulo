@@ -31,7 +31,7 @@
         </form>
 
         <div id="div-mensagem">
-            <p id="mensagem-erro">Mensagem de erro</p>
+            <p style="font-size: 1.4rem;" id="mensagem-erro">Mensagem de erro</p>
         </div>
 
     </div>
@@ -54,8 +54,8 @@
         </header>
 
         <div id="button-div">
-            <button id="button-yes">Yes</button>
-            <button id="button-no">No</button>
+            <button id="button-yes">Delete</button>
+            <button id="button-no">Cancel</button>
         </div>
     </div>
 
@@ -64,19 +64,47 @@
     <div id="fade2" class="hide"></div>
     <div id="modal2" class="hide">
         <div style="padding: 20px;">
-            <i class="fa-solid fa-x" id="botao-visu"></i>
+            <header style="display: flex;">
+                <i class="fa-solid fa-x" id="botao-visu"></i>
+            </header>
             <div id="div-descricao">
-                <h3>Descricao: </h3>
+                <h3 style="font-size: 1.6rem;">Description: </h3>
                 <hr style="background-color: white; padding: 1px; margin-bottom: 1%;">
-                <p id="pdesc">Teste</p>
+                <p style="font-size: 1.4rem;" id="pdesc">Teste</p>
             </div>
     
             <div id="div-detalhamento">
-                <h3>Detalhamento: </h3>
+                <h3 style="font-size: 1.6rem;">Detailing: </h3>
                 <hr style="background-color: white; padding: 1px; margin-bottom: 1%;">
-                <p id="pdeta">Teste</p>
+                <p style="font-size: 1.4rem;" id="pdeta">Teste</p>
             </div>
         </div>
+    </div>
+
+    <!-- Modal editar recados -->
+
+    <div id="fade3" class="hide"></div>
+    <div id="modal3" class="hide">
+        <header id="header3">
+            <i class="fa-solid fa-x" id="botao-edit"></i>
+            <h4>Edit message</h4>
+        </header>
+
+        <form id="form2">
+            <p id="erro-edit" class="mensagem-edit">erro</p>
+            <div>
+                <label for="input-desc">Descricao: </label>
+                <input type="text" placeholder="Digita a descricao..." id="input-desc">
+            </div>
+    
+            <div>
+                <label for="input-deta">Detalhamento: </label>
+                <input type="text" placeholder="Digite o detalhamento..." id="input-deta">
+            </div>
+
+            <button style="margin-right: 2%;">Save</button>
+            <button>Reset</button>
+        </form>
     </div>
 
     <script src="https://kit.fontawesome.com/1fb8dcae34.js" crossorigin="anonymous"></script>
