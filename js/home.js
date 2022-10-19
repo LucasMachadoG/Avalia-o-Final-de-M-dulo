@@ -20,9 +20,13 @@ const fade2 = document.getElementById ("fade2")
 const buttonFecharVisu = document.getElementById ("botao-visu")
 
 // Variaveis modal editar recado 
-const modal3 = document.getElementById ("")
-const fade3 = document.getElementById ("")
-
+const modal3 = document.getElementById ("modal3")
+const fade3 = document.getElementById ("fade3")
+const buttonFecharEdit = document.getElementById ("botao-edit")
+const form2 = document.getElementById ("form2")
+const descEdit = document.getElementById ("input-desc")
+const detaEdit = document.getElementById ("input-deta")
+let id = 0
 
 
 checkLogado ()
@@ -70,8 +74,6 @@ function validacaoInputs () {
     
 }
 
-
-
 function salvarRecado (recados) {
     const variavel =JSON.parse(localStorage.getItem (checkLogado())) 
     
@@ -93,18 +95,18 @@ function adicionarTabela () {
         cards.innerHTML += `
         <div class="card">
         <header>
-        <p>Message ${recado.id}</p>
-        <i class="fa-solid fa-magnifying-glass" onclick="updateModal2('${recado.descricao}', '${recado.detalhamento}')"></i>
+        <p style="font-size: 1.4rem;">Message ${recado.id}</p>
+        <i style="font-size: 1.4rem;" class="fa-solid fa-magnifying-glass" onclick="updateModal2('${recado.descricao}', '${recado.detalhamento}')"></i>
         </header>
         <div class="card-div">
-        <h4>Descricao: </h4>
-        <p style="margin-bottom: 3%;" class="descricao-card">${recado.descricao}</p>
+        <h4 style="font-size: 1.4rem;">Description: </h4>
+        <p style="margin-bottom: 3%; font-size: 1.4rem;" class="descricao-card">${recado.descricao}</p>
         
-        <h4>Detalhamento: </h4>
-        <p>${recado.detalhamento}</p>
+        <h4 style="font-size: 1.4rem;">Detailing: </h4>
+        <p style="font-size: 1.4rem;">${recado.detalhamento}</p>
         </div>
         <footer>
-        <button class="button-card buttoncard-edit">Edit</button>
+        <button class="button-card buttoncard-edit" onclick="updateModal3(${recado.id})">Edit</button>
         <button onclick="updateModal (${recado.id})" class="button-card buttoncard-delete">Delete</button>
         </footer>
         </div>
@@ -132,13 +134,6 @@ function updateModal2 (descricao, detalhamento) {
     p2.innerText = detalhamento
 }
 
-function updateModal3 () {
-
-}
-
-
-
-
 function removerRecados (id) {
     const recados = pegarRecados()
     
@@ -147,7 +142,6 @@ function removerRecados (id) {
     if (recadosEdit < 0) {
         return
     }
-    
     
     recados.splice (recadosEdit, 1)
     
@@ -158,34 +152,40 @@ function removerRecados (id) {
     toggleModal ()
 }
 
-function editarRecados (id) {
-    const recados = pegarRecados ()
-    
-    const editRecados = recados.findIndex ((recado) => recado.id === id)
+function updateModal3 (idValue) {
+    toggleModal3 ()
 
-    recados[editRecados].descricao = prompt ("Edit Description: ")
+    id = idValue
+
+    form2.addEventListener ("submit", (event) => {
+        event.preventDefault ()
     
-    recados[editRecados].detalhamento = prompt ("Edit Detail: ")
-    
-    if (recados[editRecados].detalhamento == "" || recados[editRecados].detalhamento == null) {
-        alert ("You must fill in the fields!")
-        return 
-    } else {
-        salvarRecado (recados)
-    }
-    
-    if (recados[editRecados].descricao == "" || recados[editRecados].descricao == null) {
-        alert ("You must fill in the fields!")
-        return
-    } else {
-        salvarRecado (recados)
-    }
-    
-    alert ("Message edited successfully!")
-    
-    adicionarTabela()
+        validaEditar ()
+    })
 }
 
+
+function validaEditar () {
+    let recados = pegarRecados ()
+    const index = recados.findIndex((recado) => recado.id === id)
+
+    if (!descEdit.value || !detaEdit.value) {
+    erroEdit ("You must fill in the fields!")
+        return
+    } else {
+        recados[index].descricao = descEdit.value
+        recados[index].detalhamento = detaEdit.value
+        salvarRecado (recados)
+    }
+
+    alert ("Message edited successfully!")
+
+    adicionarTabela()
+
+    form2.reset()
+
+    toggleModal3()
+}
 
 function erro (mensagem) {
     const divControl = document.getElementById("div-mensagem")
@@ -195,12 +195,18 @@ function erro (mensagem) {
     divControl.classList = "div-mensagem erro"
 }
 
+function erroEdit (mensagem) {
+    const p = document.getElementById ("erro-edit")
+
+    p.innerText = mensagem
+    p.classList = "mensagem-edit erro-edit"
+}
+
 function sucesso () {
     const divControl = document.getElementById("div-mensagem")
     
     divControl.classList = "div-mensagem"
 }
-
 
 function checkLogado () {
     if (logado) {
@@ -240,5 +246,10 @@ function toggleModal2 () {
 })
 
 function toggleModal3 () {
-    
+    modal3.classList.toggle ("hide")
+    fade3.classList.toggle ("hide")
 }
+
+[fade3, buttonFecharEdit].forEach ((e) => {
+    e.addEventListener ("click", () => toggleModal3())
+})

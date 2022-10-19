@@ -76,34 +76,34 @@ function validacaoInput (){
   
   
   if (usuarioValue === "") {
-    erro (usuario, "Nome de usuário é obrigatório!")
+    erro (usuario, "Username is required!")
     return
   } else {
     sucesso (usuario)
   }
   
   if (emailValue === "") {
-    erro (email, "O email é obrigatório!")
+    erro (email, "Email is mandatory!")
     return
   } else {
     sucesso (email)
   }
   
   if (senhaValue === "") {
-    erro (senha, "A senha é obrigatória")
+    erro (senha, "Password is mandatory!")
     return
   } else if (senhaValue.length < 7) {
-    erro (senha, "A senha precisa ter no mínimo 7 caracteres!")
+    erro (senha, "The password must be at least 7 characters long!")
     return
   } else {
     sucesso (senha)
   }
   
   if (senhaConfirmValue === "") {
-    erro (confirmSenha, "A confirmação de senha é obrigatório!")
+    erro (confirmSenha, "Password confirmation is required!")
     return
   } else if (senhaConfirmValue != senhaValue) {
-    erro (confirmSenha, "A senha não é a mesma!")
+    erro (confirmSenha, "The password is not the same!")
     return
   } else {
     sucesso (confirmSenha)
@@ -116,7 +116,7 @@ function validacaoInput (){
     listaRecados: []
   })
 
-  alert ("Sua conta foi criada com sucesso!")
+  alert ("Your account has been successfully created!")
   toggleModal()
   
 }
@@ -138,7 +138,7 @@ function validacaoTroca () {
   const conta = pegarConta (email)
 
   if (!conta) {
-    erroTroca ("Este email nao esta cadastrado!")
+    erroTroca ("This email is not registered!")
     return
   }
 
